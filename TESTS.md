@@ -1,6 +1,14 @@
 # Generate Test Case with Github Copilot
 
 ```
+## Configure Test Framework
+
+Configure test framework for this workspace.
+Use pytest as the unit testing framework
+Also the test cases are stored under the /tests folder
+
+## Configure Unit Testing
+
 I am working on a Flask application using Blueprints. The file I'm currently in contains REST API routes registered using Flask's Blueprint. The application also sets the `template_folder` path for rendering UI templates.
 
 Please analyze this file and help generate **unit test cases using pytest** for the Flask routes defined here.
@@ -53,3 +61,11 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../.
 ```
 
 After this we can run the pytest again and it should run without any errors.
+
+# Sample Screens
+
+<img src="./media/copilot-setup-pytest.png" width="90%">
+
+<img src="./media/copilot-setup-framework.png" width="90%">
+
+<img src="./media/copilot-initial-start.png" width="90%">
