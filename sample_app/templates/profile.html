@@ -1,0 +1,50 @@
+{% include 'header.html' %}            
+
+            <div class="col-md-lg mt-5"> 
+                <h2>Profile ID {{profile_id}}</h2>
+                <table class="table table-bordered table-dark">
+                    <tbody>
+                    {% if profile_data|length > 0 %}
+                    {% set counter = namespace(value=1) %}
+                    {% for result in profile_data %}
+                    <tr scope="row">
+                        <td>ID</td>
+                        <td>{{result._id}}</td>
+                    </tr>
+                    <tr>
+                        <td>GUID</td>
+                        <td>{{result.guid}}</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{result.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{result.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone No.</td>
+                        <td>{{result.phone}}</td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>{{result.age}}</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>{{result.gender}}</td>
+                    </tr>
+                    {% set counter.value = counter.value + 1 %}
+                    {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td>Sorry no data found!</td>
+                    </tr>
+                    {% endif %}
+                    </tbody>
+               </table>
+            </div>
+
+
+{% include 'footer.html' %}    
